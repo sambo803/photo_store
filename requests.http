@@ -1,1 +1,34 @@
-GET http://localhost:3000
+
+# Photos Index
+GET http://localhost:3000/photos.json
+
+###
+# Photos Create
+POST http://localhost:3000/photos.json
+Content-Type: application/json
+
+{
+  "name": "Test Name",
+  "Width": 640,
+  "Height": 480
+}
+
+###
+# Photos Show
+GET http://localhost:3000/photos/4.json
+
+###
+# Photos Update
+PATCH http://localhost:3000/photos/2.json
+Content-Type: application/json
+
+{
+   "name": "New Name",
+  "Width": 640,
+  "Height": 480
+}
+
+###
+#Photos Destroy
+DELETE http://localhost:3000/photos/2.json
+
